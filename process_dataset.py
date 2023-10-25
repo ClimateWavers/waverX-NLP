@@ -1,8 +1,8 @@
-## dataset source: https://www.kaggle.com/team-ai/spam-text-message-classification
 import pandas as pd
 import torch
 from keras.preprocessing.sequence import pad_sequences
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
 from transformers import BertTokenizer, BertConfig
 from tqdm import tqdm
 import logging
@@ -28,17 +28,19 @@ class DisastersData:
         self.max_sequence_length = max_sequence_length
         ## get bert tokenizer
         self.tokenizer = BertTokenizer.from_pretrained('prajjwal1/bert-mini', do_lower_case=True)
+        self.label_encoder = LabelEncoder()
+        self.label_encoder.fit(self.train_df['label'].values)
 
     def train_val_test_split(self):
         """
         Separate out labels and texts
         """
         train_texts = self.train_df['text'].values
-        train_labels = self.train_df['label'].values
+        train_labels = self.label_encoder.transform(self.train_df['label'].values)
         val_texts = self.val_df['text'].values
-        val_labels = self.val_df['label'].values
+        val_labels =  self.label_encoder.transform(self.val_df['label'].values)
         test_texts = self.test_df['text'].values
-        test_labels = self.test_df['label'].values
+        test_labels =  self.label_encoder.transform(self.test_df['label'].values)
 
         return train_texts, val_texts, test_texts, train_labels, val_labels, test_labels
 
@@ -147,7 +149,6 @@ class DisastersData:
         print('converting all variables to tensors')
         ## convert inputs, masks and labels to torch tensors
         self.train_inputs = torch.tensor(train_ids)
-        print(train_labels)
         self.train_labels = torch.tensor(train_labels)
         self.train_masks = torch.tensor(train_masks)
 
