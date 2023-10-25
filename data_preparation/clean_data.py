@@ -8,8 +8,12 @@ def filter_data(input_file, output_file):
     # Read CSV file into a DataFrame
     df = pd.read_csv(input_file)
 
+    #Make sure all data are of same type of string
+    df['text'] = df['text'].astype(str)
+    df['label'] = df['label'].astype(str)
     # Drop rows where target column is 0
     cleaned_df = df[df['target'] != 0]
+
 
 
     # Write cleaned DataFrame back to a CSV file
