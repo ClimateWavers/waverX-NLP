@@ -113,7 +113,7 @@ class DisastersData:
         del test_texts_processed
 
         del self.train_df
-        del self.dev_df
+        del self.val_df
         del self.test_df
 
         ## create masks for train, val, test texts
@@ -147,6 +147,7 @@ class DisastersData:
         print('converting all variables to tensors')
         ## convert inputs, masks and labels to torch tensors
         self.train_inputs = torch.tensor(train_ids)
+        print(train_labels)
         self.train_labels = torch.tensor(train_labels)
         self.train_masks = torch.tensor(train_masks)
 
