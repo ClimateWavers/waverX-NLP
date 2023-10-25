@@ -1,4 +1,4 @@
-from utils import flat_accuracy
+from utils.accuracy import flat_accuracy
 from tqdm import trange
 import torch
 

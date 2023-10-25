@@ -22,7 +22,7 @@ class DisastersData:
         """
         ## load data into memory
         self.train_df = pd.read_csv(data_path['train'])
-        self.dev_df = pd.read_csv(data_path['dev'])
+        self.val_df = pd.read_csv(data_path['val'])
         self.test_df = pd.read_csv(data_path['test'])
         ## set max sequence length for model
         self.max_sequence_length = max_sequence_length
@@ -33,12 +33,12 @@ class DisastersData:
         """
         Separate out labels and texts
         """
-        train_texts = self.train_df['doc'].values
-        train_labels = self.train_df.target.values
-        val_texts = self.dev_df['doc'].values
-        val_labels = self.dev_df.target.values
-        test_texts = self.test_df['doc'].values
-        test_labels = self.test_df.target.values
+        train_texts = self.train_df['text'].values
+        train_labels = self.train_df['label'].values
+        val_texts = self.val_df['text'].values
+        val_labels = self.val_df['label'].values
+        test_texts = self.test_df['text'].values
+        test_labels = self.test_df['label'].values
 
         return train_texts, val_texts, test_texts, train_labels, val_labels, test_labels
 
