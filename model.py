@@ -1,5 +1,5 @@
 import torch
-from model import BERTClassifier
+from bert import BERTClassifier
 from config import BertOptimConfig
 from train_model import train_model
 from evaluate import eval_model
