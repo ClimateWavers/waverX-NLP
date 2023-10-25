@@ -22,7 +22,8 @@ def add_data_type(input_file):
     df['text'] = df['text'].astype(str)
     df['label'] = df['label'].astype(str)
     print("Ensured all data are of type str")
-# Example usage
+
+
 if __name__ == "__main__":
     # Provide input and output file paths
     base_dir = 'dataset'

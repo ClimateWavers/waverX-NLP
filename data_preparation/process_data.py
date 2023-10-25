@@ -33,7 +33,7 @@ for index, row in tweet.iterrows():
         keyword = "Wild Fire"
     print(f"New {keyword}")
     if keyword in labels:
-        text = str(row["text"])
+        text = str(row["text"]).replace(" ", "_")
         label = keyword
         dataset = pd.DataFrame([[text, label]])
         dataset.to_csv("dataset/" + "disaster_text.csv",
