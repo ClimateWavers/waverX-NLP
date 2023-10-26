@@ -7,7 +7,7 @@ from data_loader import DisastersDataLoader
 
 
 epochs = 5
-num_labels = 2
+num_labels = 12
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 data_path = {
     "train": "dataset/train_disaster_dataset.csv",
