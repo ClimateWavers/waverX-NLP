@@ -4,7 +4,7 @@ import torch
 
 
 class BERTClassifier:
-    def __init__(self, num_labels=2):
+    def __init__(self, num_labels=13):
         self.configuration = BertConfig()
 
     def get_model(self):
@@ -15,7 +15,7 @@ class BERTClassifier:
         model = BertModel(self.configuration)
 
         model = BertForSequenceClassification.from_pretrained(
-            "prajjwal1/bert-mini", num_labels=2
+            "prajjwal1/bert-mini", num_labels=13
         )
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)
