@@ -208,7 +208,7 @@ text,label
 "Collapsed bridges and damaged roads pose logistical challenges, hindering relief efforts and impeding aid delivery to isolated communities.",Damaged Infrastructure
 "The human damage caused by the conflict results in a refugee crisis, forcing families into makeshift camps, facing overcrowding and limited resources.",Human Damage
 "International humanitarian agencies coordinate efforts to provide medical care, clean water, and temporary shelter to displaced families.",Humanitarian Aid
-"Land slides bury villages, leaving destruction in their wake and making it challenging for rescue teams to access survivors.",Landslide
+"Land slides bury villages, leaving destruction in their wake and making it challenging for rescue teams to access survivors.",Land Slide
 "While buildings and streets appear intact, the constant threat of landslides necessitates geological assessments and early warning systems.",Non Damage Buildings And Street
 "Non-damage to wildlife forest areas is crucial for preserving biodiversity, promoting eco-friendly practices, and scientific research.",Non Damage Wildlife Forest
 "Coastal cities invest in resilient urban planning, constructing flood-resistant buildings, and restoring natural coastal ecosystems.",Sea
@@ -224,8 +224,8 @@ text,label
 "While buildings and streets appear intact, the constant threat of landslides necessitates geological assessments and early warning systems.",Non Damage Buildings and Street
 "Non-damage to wildlife forest areas is crucial for preserving biodiversity, promoting eco-friendly practices, and scientific research.",Non Damage Wildlife Forest
 "Coastal cities invest in resilient urban planning, constructing flood-resistant buildings, and restoring natural coastal ecosystems.",Sea
-"Urban fire preparedness programs educate communities about fire-resistant construction materials and firefighting techniques.",Urban Fire Safety
-"Wildfires continue to ravage natural habitats, driving scientists to study fire ecology and implement reforestation efforts.",Wildfire
+"Urban fire preparedness programs educate communities about fire-resistant construction materials and firefighting techniques.",Urban Fire
+"Wildfires continue to ravage natural habitats, driving scientists to study fire ecology and implement reforestation efforts.",Wild Fire
 "The aftermath of water disasters showcases community resilience, emphasizing the importance of clean water access and sustainable water supply systems.",Water Disaster
 "A catastrophic earthquake, measuring 9.5 on the Richter scale, strikes, causing widespread devastation and triggering landslides in mountainous regions.",Earthquake
 "The severe drought persists, leading to water shortages, livestock fatalities, and agricultural collapse, posing a threat to local livelihoods.",Drought
@@ -236,7 +236,7 @@ text,label
 "Although buildings and streets remain intact, the constant risk of landslides necessitates geological assessments and advanced warning systems.",Non Damage Buildings and Street
 "Preserving non-damage to wildlife forest areas is vital for conservation efforts, promoting sustainable practices and scientific research.",Non Damage Wildlife Forest
 "Coastal cities invest in resilient urban planning, constructing flood-resistant structures, and restoring natural coastal habitats.",Sea
-"Urban fire preparedness initiatives educate communities on fire-resistant construction materials and firefighting techniques.",Urban Fire Safety
+"Urban fire preparedness initiatives educate communities on fire-resistant construction materials and firefighting techniques.",Urban Fire
 "Continuing wildfires devastate ecosystems, compelling ecologists to study fire ecology and implement habitat restoration programs.",Wildfire
 "The aftermath of water-related disasters underscores the importance of clean water access and resilient water supply systems for affected communities.",Water Disaster
 "A powerful earthquake, with a magnitude of 9.3, rocks the region, causing extensive damage to buildings and triggering landslides on steep slopes.",Earthquake
@@ -260,7 +260,7 @@ text,label
 "Non-damage to wildlife forest areas is a beacon of hope, promoting eco-friendly practices and sustainable tourism to protect diverse ecosystems and endangered species.",Non Damage Wildlife Forest
 "Coastal cities invest in resilient urban planning, constructing flood-resistant buildings and restoring mangrove forests to mitigate the impact of rising sea levels.",Sea
 "Urban fire preparedness initiatives educate communities about fire-resistant construction materials, firefighting techniques, and fire evacuation protocols.",Urban Fire Safety
-"Wildfires continue to ravage natural habitats, prompting ecologists to study fire ecology and implement reforestation efforts for habitat restoration and conservation.",Wildfire
+"Wildfires continue to ravage natural habitats, prompting ecologists to study fire ecology and implement reforestation efforts for habitat restoration and conservation.",Wild Fire
 "The aftermath of water-related disasters showcases community resilience, emphasizing the importance of watershed management, clean water access, and sustainable water supply systems.",Water Disaster
 "A devastating earthquake with a magnitude of 8.5 struck the city, causing widespread destruction and loss of life.",Earthquake
 "Severe drought has parched farmlands, leading to crop failures and water shortages in the region.",Drought
