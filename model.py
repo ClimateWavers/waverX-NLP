@@ -6,7 +6,7 @@ from evaluate import eval_model
 from data_loader import DisastersDataLoader
 
 
-epochs = 5
+epochs = 3
 num_labels = 13
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 data_path = {
