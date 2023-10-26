@@ -38,3 +38,16 @@ for index, row in tweet.iterrows():
         dataset = pd.DataFrame([[text, label]])
         dataset.to_csv("dataset/" + "disaster_text.csv",
                    mode='a', header=False, index=False)
+
+
+def add_data_type(input_file):
+    df = pd.read_csv(input_file)
+    #Make sure all data are of same type of string
+    df['text'] = df['text'].astype(str)
+    df['label'] = df['label'].astype(str)
+    print("Ensured all data are of type str")
+
+
+
+if __name__ == "__main__":
+    add_data_type("dataset/disaster_text.csv")

@@ -16,12 +16,7 @@ def filter_data(input_file, output_file):
     print(f"Cleaned data saved to {output_file}")
 
 
-def add_data_type(input_file):
-    df = pd.read_csv(input_file)
-    #Make sure all data are of same type of string
-    df['text'] = df['text'].astype(str)
-    df['label'] = df['label'].astype(str)
-    print("Ensured all data are of type str")
+
 
 
 if __name__ == "__main__":
@@ -30,4 +25,3 @@ if __name__ == "__main__":
     disaster_dataset = f"{base_dir}/tweets.csv"
     # Filter Data
     filter_data(disaster_dataset, disaster_dataset)
-    add_data_type("dataset/disaster_text.csv")
