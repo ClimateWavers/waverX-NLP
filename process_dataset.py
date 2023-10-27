@@ -28,6 +28,7 @@ class DisastersData:
         self.max_sequence_length = max_sequence_length
         ## get bert tokenizer
         self.tokenizer = BertTokenizer.from_pretrained('prajjwal1/bert-mini', do_lower_case=True)
+        self.tokenizer.save_pretrained("model/tokenizer")
         self.label_encoder = LabelEncoder()
         self.label_encoder.fit(self.train_df['label'].values)
 

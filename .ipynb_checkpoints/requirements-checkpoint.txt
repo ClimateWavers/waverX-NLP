@@ -1,0 +1,14 @@
+torch
+tensorflow
+transformers
+tqdm
+scikit-learn
+numpy
+pandas
+keras
+flask
+flask_corsnumpy
+pandas
+keras
+gunicorn
+
