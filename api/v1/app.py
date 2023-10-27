@@ -2,20 +2,24 @@
 """ Flask Application """
 
 from os import environ
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS
+from prediction import predict
 import json
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
-@app.route("api/v1/waverx-nlp", strict_slashes=False)
+@app.route("api/v1/model/waverx-nlp", strict_slashes=False)
 def model_inference():
-    data = request.data or '{}'
-    body = json.loads(data)
+    text = request.data or '{}'
+    body = json.loads(text)
     return jsonify(predict(body))
 
+@app.route("api/v1/model/waverx-nlp/status", strict_slashes=False)
+def model_status():
+    return jsonify({"status": "OK"})
 
 @app.errorhandler(404)
 def not_found(error):
