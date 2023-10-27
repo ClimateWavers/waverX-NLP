@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
-@app.route("/api/v1/model/waverx-nlp",  methods=['POST'],strict_slashes=False)
+@app.route("/api/v1/model/waverx-nlp", methods=['POST'], strict_slashes=False)
 def model_inference():
     text = request.form['text']
     return jsonify(predict(text))
