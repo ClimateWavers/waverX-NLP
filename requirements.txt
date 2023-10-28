@@ -7,7 +7,7 @@ numpy
 pandas
 keras
 flask
-flask_corsnumpy
+flask_cors
 pandas
 keras
 gunicorn

@@ -5,14 +5,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from transformers import BertTokenizer, BertConfig
 from tqdm import tqdm
+
 import logging
 
 ## setting the threshold of logger to INFO
-logging.basicConfig(filename='data_loader.log', level=logging.INFO)
+logging.basicConfig(filename='server.log', level=logging.INFO)
 
 ## creating an object
 logger = logging.getLogger()
-
 
 
 class DisastersData:

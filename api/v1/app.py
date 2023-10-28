@@ -7,16 +7,24 @@ from flask_cors import CORS
 from prediction import predict
 import json
 
+import logging
+
+## setting the threshold of logger to INFO
+logging.basicConfig(filename='server.log', level=logging.INFO)
+
+## creating an object
+logger = logging.getLogger()
+
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
-@app.route("/api/v1/NLP/model/waverx", methods=['POST'], strict_slashes=False)
+@app.route("/api/v1/nlp/model/waverx", methods=['POST'], strict_slashes=False)
 def model_inference():
     text = request.form['text']
     return jsonify(predict(text))
 
-@app.route("/api/v1/NLP/model/waverx/status", strict_slashes=False)
+@app.route("/api/v1/nlp/model/waverx/status", strict_slashes=False)
 def model_status():
     return jsonify({"status": "OK"})
 
@@ -34,8 +42,8 @@ def not_found(error):
 
 if __name__ == "__main__":
     """ Main Function """
-    host = environ.get('HBNB_API_HOST')
-    port = environ.get('HBNB_API_PORT')
+    host = environ.get('MODEL_HOST')
+    port = environ.get('MODEL_PORT')
     if not host:
         host = '0.0.0.0'
     if not port:
