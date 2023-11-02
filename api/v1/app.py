@@ -9,11 +9,7 @@ import json
 
 import logging
 
-## setting the threshold of logger to INFO
-logging.basicConfig(filename='server.log', level=logging.INFO)
 
-## creating an object
-logger = logging.getLogger()
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
