@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: models
+  name: waverx-analysis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: waverx-analysis
+  template:
+    metadata:
+      labels:
+        app: waverx-analysis
+    spec:
+      containers:
+        - image: quay.io/olagoldhackxx/climatewavers-djangobackend:v1
+          imagePullPolicy: Always
+          name: waverx-analysis
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+      imagePullSecrets:
+        - name: quay-registry-secret

@@ -11,4 +11,4 @@ flask_cors
 pandas
 keras
 gunicorn
-
+intel_extension_for_pytorch
