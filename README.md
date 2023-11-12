@@ -98,10 +98,3 @@ Deploy with tekton with the pipeline deployment script in `automated_deployment`
 
 This microservice is licensed under the [MIT License](LICENSE).
 
-## Acknowledgments
-
-Mention any libraries, platforms, or individuals you want to acknowledge in the development of this microservice.
-
----
-
-Feel free to adapt and expand on these sections based on your specific details and requirements.
