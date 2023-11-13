@@ -1,26 +1,27 @@
 ---
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
 metadata:
   labels:
-    app: models
-  name: waverx-analysis
+    app: waverx-nlp
+    app.kubernetes.io/component: waverx-nlp
+    app.kubernetes.io/instance: waverx-nlp
+    app.kubernetes.io/name: waverx-nlp
+    app.kubernetes.io/part-of: models
+  name: waverx-nlp
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: waverx-analysis
+    app: waverx-nlp
   template:
     metadata:
       labels:
-        app: waverx-analysis
+        app: waverx-nlp
     spec:
       containers:
-        - image: quay.io/olagoldhackxx/climatewavers-djangobackend:v1
+        - image: quay.io/olagoldhackxx/waverx-nlp:v1
           imagePullPolicy: Always
-          name: waverx-analysis
+          name: waverx-nlp
           ports:
             - containerPort: 8000
               protocol: TCP
-      imagePullSecrets:
-        - name: quay-registry-secret

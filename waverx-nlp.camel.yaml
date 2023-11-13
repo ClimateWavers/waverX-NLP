@@ -1,0 +1,29 @@
+- rest:
+    path: >-
+      https://waver-x-nlp-climatewavers-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+    id: rest-8537
+    get:
+      - id: get-95a7
+    post:
+      - id: post-51f3
+- route:
+    id: route-7ecd
+    from:
+      uri: {}
+      id: from-1720
+- route:
+    id: route-2372
+    from:
+      uri: direct
+      id: from-7ffc
+      steps:
+        - log:
+            id: log-c854
+        - to:
+            uri: rest
+            id: to-7fe2
+            parameters:
+              host: >-
+                https://waver-x-nlp-climatewavers-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+              method: POST
+              path: /nlp
